@@ -6,7 +6,19 @@ import org.junit.jupiter.api.Assertions.*
 
 class AdventKtTest {
 
+
     @Test
-    fun lanternFishCounter() {
+    fun testLanternFishCounter() {
+
+        val lanternFishListReal: MutableList<Int> = mutableListOf(3, 4, 3, 1, 2)
+        val days = 80
+
+        val result = lanternFishCounter(lanternFishListReal, days).count()
+
+        val expected = 5934
+
+        assertEquals(expected, result)
     }
+
+
 }
