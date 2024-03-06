@@ -2,13 +2,15 @@ package Advent1Version2
 
 import java.io.File
 
+//day 6 year 2021
+// Inspo : https://todd.ginsberg.com/post/advent-of-code/2021/day6/
 
 val data: String = File("src/main/kotlin/Advent1/Data advent 1").readText()
 
 
 val longArrayFishes = parseInput(data)
 
-private fun parseInput(input: String): LongArray = LongArray(9).apply {
+ fun parseInput(input: String): LongArray = LongArray(9).apply {
     input.split(",").map { it.toInt() }.forEach { this[it]++ }
 }
 

@@ -2,6 +2,8 @@ package Advent2Version2
 
 import java.io.File
 
+// Day 2 year 2020
+// inspo : https://todd.ginsberg.com/post/advent-of-code/2020/day2/
 
 data class PasswordPolicy(val range: IntRange, val letter: Char, val password: String) {
 

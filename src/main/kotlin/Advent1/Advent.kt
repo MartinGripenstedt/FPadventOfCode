@@ -2,6 +2,8 @@ package Advent1
 
 import java.io.File
 
+// Day 6 year 2021
+
 val data: List<String> = File("src/main/kotlin/Advent1/Data advent 1").readLines()
 
 val lanternFishListReal: MutableList<Int> = data.flatMap { line ->

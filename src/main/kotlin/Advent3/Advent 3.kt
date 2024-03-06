@@ -1,6 +1,7 @@
 package Advent3
 import java.io.File
 
+// Day 3 year 2022
 
 val pointsMap = mapOf(
     'a' to 0, 'b' to 1, 'c' to 2, 'd' to 3, 'e' to 4,
@@ -36,16 +37,14 @@ val pointsMap = mapOf(
         return totalPoints
 
     }
-fun main() {
 
-
-    val data = "src/main/kotlin/Advent3/Data advent 3"
-
-    println( part2(data,pointsMap))
+fun part1(file: String , map : Map<Char,Int>) : Int {
 
     var totalPoints = 0
 
-    File("src/main/kotlin/Advent3/Data advent 3").forEachLine { line ->
+    File(file).forEachLine { line ->
+
+
 
         val half = line.length / 2
 
@@ -55,11 +54,19 @@ fun main() {
 
         val foundCharacter = firstHalf.intersect(secondHalf)
 
-        val points = pointsMap[foundCharacter.first()]
+        val points = map[foundCharacter.first()]
+
 
         if (points != null) {
             totalPoints += points + 1
         }
     }
-    println(totalPoints)
+    return totalPoints
+}
+fun main() {
+
+    val data = "src/main/kotlin/Advent3/Data advent 3"
+
+    println(part1(data, pointsMap))
+    println(part2(data,pointsMap))
 }

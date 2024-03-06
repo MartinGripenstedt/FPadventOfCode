@@ -9,9 +9,18 @@ class Avent2KtTest {
     @Test
     fun validPwCounter() {
 
-        val result = Advent2.validPwCounter("src/test/kotlin/Advent2/testData")
+        val result = validPwCounter("src/test/kotlin/Advent2/testData")
         val expected = 2
 
         assertEquals(expected,result)
     }
+    @Test
+    fun validPwCounter2() {
+
+        val result = validPwCounter2("src/test/kotlin/Advent2/testData")
+        val expected = 1
+
+        assertEquals(expected,result)
+    }
+
 }
